@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteIcon from "./SiteIcon";
 export default function Header(){return (<header className="header">
 <Link className="brand route" data-view="home" href="/">
-<span className="brand-logo"><img src="/images/rb-logo.png" alt="R.B. Complex" /></span>
+<span className="brand-logo"><img src="/images/RBC-logo-cropped.png" alt="R.B. Complex" /></span>
 <small >{"New Road · Kathmandu"}</small>
 </Link>
 <nav className="nav">
@@ -11,6 +11,8 @@ export default function Header(){return (<header className="header">
 <Link className="route" data-view="stores" href="/stores/">{"Stores"}</Link>
 <Link className="route" data-view="offers" href="/offers/">{"Offers"}</Link>
 <Link className="route" data-view="whats-on" href="/whats-on/">{"What's On"}</Link>
+<Link className="route" data-view="gallery" href="/gallery/">{"Gallery"}</Link>
+<Link className="route" data-view="blog" href="/blog/">{"Blog"}</Link>
 <Link className="route" data-view="visit" href="/visit/">{"Visit"}</Link>
 <Link className="route" data-view="leasing" href="/leasing/">{"Leasing"}</Link>
 </nav>
