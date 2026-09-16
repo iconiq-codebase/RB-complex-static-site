@@ -14,6 +14,9 @@ export default function Header() {
         <Link className="route active" data-view="home" href="/">
           {"Home"}
         </Link>
+        <Link className="route" data-view="about" href="/about/">
+          {"About"}
+        </Link>
         <Link className="route" data-view="stores" href="/stores/">
           {"Stores"}
         </Link>

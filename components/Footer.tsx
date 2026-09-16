@@ -2,6 +2,7 @@ import Link from "next/link";
 import SiteIcon from "./SiteIcon";
 
 const explore = [
+  ["About", "/about/"],
   ["Stores", "/stores/"],
   ["Offers", "/offers/"],
   ["What’s On", "/whats-on/"],
@@ -36,7 +37,7 @@ export default function Footer() {
           </p>
           <div className="footer-social" aria-label="R.B. Complex social media">
             <a
-              href="https://www.facebook.com/rbcomplex262/"
+              href="https://www.facebook.com/profile.php?id=61594139743229"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -46,7 +47,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/explore/locations/285394409050985/rb-complex/"
+              href="https://www.instagram.com/rbcomplexofficial/"
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
@@ -69,7 +70,7 @@ export default function Footer() {
               </svg>
             </a> */}
             <a
-              href="https://www.tiktok.com/@rb.complex.262"
+              href="https://www.tiktok.com/@rbcomplexofficial"
               target="_blank"
               rel="noreferrer"
               aria-label="TikTok"
