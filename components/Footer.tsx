@@ -57,7 +57,7 @@ export default function Footer() {
                 <circle cx="17.5" cy="6.5" r="1" className="social-dot" />
               </svg>
             </a>
-            <a
+            {/* <a
               href="https://www.youtube.com/"
               target="_blank"
               rel="noreferrer"
@@ -67,7 +67,7 @@ export default function Footer() {
                 <path d="M21.6 7.2a2.9 2.9 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C2 9 2 12 2 12s0 3 .4 4.8a2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2C22 15 22 12 22 12s0-3-.4-4.8Z" />
                 <path d="m10 15 5-3-5-3v6Z" className="social-play" />
               </svg>
-            </a>
+            </a> */}
             <a
               href="https://www.tiktok.com/@rb.complex.262"
               target="_blank"

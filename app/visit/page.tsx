@@ -13,9 +13,9 @@ export default function Page(){return (<div className="view active" id="view-vis
 <h3 >{"Right in the heart"}<br  />{"of New Road."}</h3>
 <p >{"Use this page for directions, official hours, parking guidance and visitor services."}</p>
 <div className="info-list">
-<div className="info-row"><small >{"Address"}</small><strong >{"Pako, New Road, Kathmandu, Nepal"}</strong></div>
+<div className="info-row"><small >{"Address"}</small><strong >{"New Road (Pukhudhyan Marg / Ranamukteshwor Marg), Kathmandu, Nepal"}</strong></div>
 <div className="info-row"><small >{"Phone"}</small><strong >{"01-4220503"}</strong></div>
-<div className="info-row"><small >{"Hours"}</small><strong >{"To be verified with management"}</strong></div>
+<div className="info-row"><small >{"Visitor note"}</small><strong >{"Individual store schedules and holiday availability may vary."}</strong></div>
 </div>
 <div className="actions">
 <a className="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=RB+Complex+New+Road+Kathmandu" target="_blank" rel="noopener">{"Open Google Maps ↗"}</a>
@@ -62,7 +62,7 @@ export default function Page(){return (<div className="view active" id="view-vis
 <p >{"These are prototype FAQ topics. Official answers should come from R.B. Complex management."}</p>
 </div>
 <div className="faq">
-<details className="reveal show"><summary >{"What are the official opening hours?"}</summary><p >{"Opening hours should be confirmed with management before publication. The final site can also show special festival or holiday hours."}</p></details>
+<details className="reveal show"><summary >{"Do all stores follow the same schedule?"}</summary><p >{"Individual store schedules and festival availability may vary. Contact a store directly when planning a specific visit."}</p></details>
 <details className="reveal show"><summary >{"Where can visitors park?"}</summary><p >{"The site should publish only verified parking locations, capacity information and any applicable visitor rules."}</p></details>
 <details className="reveal show"><summary >{"How do I find a particular store?"}</summary><p >{"Use the searchable Stores page. A production version can connect each tenant to a verified floor position and unit number."}</p></details>
 <details className="reveal show"><summary >{"How can I contact R.B. Complex?"}</summary><p >{"The prototype currently shows the public directory number 01-4220503. Official contact channels should be confirmed before launch."}</p></details>
