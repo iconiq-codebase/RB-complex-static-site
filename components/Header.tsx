@@ -1,7 +1,21 @@
 "use client";
 import Link from "next/link";
+import { useCallback, useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 import SiteIcon from "./SiteIcon";
 export default function Header() {
+  const [language, setLanguage] = useState<"en" | "ne">("en");
+  const updateLanguage = useCallback((nextLanguage: "en" | "ne") => {
+    setLanguage(nextLanguage);
+  }, []);
+  const copy = language === "ne" ? {
+    home: "होम", about: "हाम्रो बारेमा", stores: "पसलहरू", offers: "अफरहरू",
+    whatsOn: "के हुँदैछ", gallery: "ग्यालरी", blog: "ब्लग", visit: "भ्रमण", leasing: "लिजिङ",
+    plan: "भ्रमण योजना",
+  } : {
+    home: "Home", about: "About", stores: "Stores", offers: "Offers", whatsOn: "What's On",
+    gallery: "Gallery", blog: "Blog", visit: "Visit", leasing: "Leasing", plan: "Plan a visit",
+  };
   return (
     <header className="header">
       <Link className="brand route" data-view="home" href="/">
@@ -12,39 +26,37 @@ export default function Header() {
       </Link>
       <nav className="nav">
         <Link className="route active" data-view="home" href="/">
-          {"Home"}
+          {copy.home}
         </Link>
         <Link className="route" data-view="about" href="/about/">
-          {"About"}
+          {copy.about}
         </Link>
         <Link className="route" data-view="stores" href="/stores/">
-          {"Stores"}
+          {copy.stores}
         </Link>
         <Link className="route" data-view="offers" href="/offers/">
-          {"Offers"}
+          {copy.offers}
         </Link>
         <Link className="route" data-view="whats-on" href="/whats-on/">
-          {"What's On"}
+          {copy.whatsOn}
         </Link>
         <Link className="route" data-view="gallery" href="/gallery/">
-          {"Gallery"}
+          {copy.gallery}
         </Link>
         <Link className="route" data-view="blog" href="/blog/">
-          {"Blog"}
+          {copy.blog}
         </Link>
         <Link className="route" data-view="visit" href="/visit/">
-          {"Visit"}
+          {copy.visit}
         </Link>
         <Link className="route" data-view="leasing" href="/leasing/">
-          {"Leasing"}
+          {copy.leasing}
         </Link>
       </nav>
       <div className="header-end">
-        <Link className="search-btn route" data-view="stores" href="/stores/">
-          {"Search stores"}
-        </Link>
+        <LanguageSwitcher onChange={updateLanguage} />
         <Link className="visit-btn route" data-view="visit" href="/visit/">
-          Plan a visit <SiteIcon name="external" className="inline-icon" />
+          {copy.plan} <SiteIcon name="external" className="inline-icon" />
         </Link>
         <button className="menu" aria-label="Menu">
           <span></span>

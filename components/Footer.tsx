@@ -1,23 +1,40 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import SiteIcon from "./SiteIcon";
 
-const explore = [
-  ["About", "/about/"],
-  ["Stores", "/stores/"],
-  ["Offers", "/offers/"],
-  ["What’s On", "/whats-on/"],
-  ["Gallery", "/gallery/"],
-  ["Blog", "/blog/"],
-  ["Plan a visit", "/visit/"],
-] as const;
-const visitor = [
-  ["Directions", "/visit/"],
-  ["Parking", "/visit/"],
-  ["Amenities", "/visit/"],
-  ["Store directory", "/stores/"],
-] as const;
+const footerCopy = {
+  en: {
+    description: "A shopping and commercial destination in the heart of New Road, Kathmandu. Find stores, offers and visitor information in one place.",
+    explore: "Explore", visitor: "Visitor", business: "For businesses", leasing: "Leasing enquiry",
+    visitUs: "Visit us", callUs: "Call us", email: "Email address", emailPlaceholder: "Enter your email address",
+    subscribe: "Subscribe", stay: "Stay in the loop", news: "What’s new at R.B. Complex?",
+    updates: "Receive updates on new arrivals, offers and moments happening at the complex.",
+    copyright: "© 2026 R.B. Complex", location: "New Road · Kathmandu · Nepal", prototype: "Website prototype",
+    slogan: "Bring your brand to New Road.",
+    exploreLinks: [["About", "/about/"], ["Stores", "/stores/"], ["Offers", "/offers/"], ["What’s On", "/whats-on/"], ["Gallery", "/gallery/"], ["Blog", "/blog/"], ["Plan a visit", "/visit/"]],
+    visitorLinks: [["Directions", "/visit/"], ["Parking", "/visit/"], ["Amenities", "/visit/"], ["Store directory", "/stores/"]],
+  },
+  ne: {
+    description: "न्यूरोड, काठमाडौंको मुटुमा रहेको किनमेल तथा व्यावसायिक गन्तव्य। पसल, अफर र आगन्तुक जानकारी एकै ठाउँमा पाउनुहोस्।",
+    explore: "अन्वेषण", visitor: "आगन्तुक जानकारी", business: "व्यवसायका लागि", leasing: "लिजिङ सोधपुछ",
+    visitUs: "हामीलाई भेट्नुहोस्", callUs: "हामीलाई फोन गर्नुहोस्", email: "इमेल ठेगाना", emailPlaceholder: "आफ्नो इमेल ठेगाना लेख्नुहोस्",
+    subscribe: "सदस्यता लिनुहोस्", stay: "सम्पर्कमा रहनुहोस्", news: "आर.बी. कम्प्लेक्समा नयाँ के छ?",
+    updates: "नयाँ आगमन, अफर र कम्प्लेक्समा भइरहेका गतिविधिबारे जानकारी पाउनुहोस्।",
+    copyright: "© २०२६ आर.बी. कम्प्लेक्स", location: "न्यूरोड · काठमाडौं · नेपाल", prototype: "वेबसाइट नमुना",
+    slogan: "आफ्नो ब्रान्डलाई न्यूरोडमा ल्याउनुहोस्।",
+    exploreLinks: [["हाम्रो बारेमा", "/about/"], ["पसलहरू", "/stores/"], ["अफरहरू", "/offers/"], ["के हुँदैछ", "/whats-on/"], ["ग्यालरी", "/gallery/"], ["ब्लग", "/blog/"], ["भ्रमण योजना", "/visit/"]],
+    visitorLinks: [["दिशानिर्देश", "/visit/"], ["पार्किङ", "/visit/"], ["सुविधाहरू", "/visit/"], ["स्टोर निर्देशिका", "/stores/"]],
+  },
+} as const;
 
 export default function Footer() {
+  const [language, setLanguage] = useState<"en" | "ne">("en");
+  useEffect(() => {
+    if (window.localStorage.getItem("rb-language") === "ne") setLanguage("ne");
+  }, []);
+  const copy = footerCopy[language];
   return (
     <footer className="mall-footer">
       <div className="footer-top">
@@ -31,10 +48,7 @@ export default function Footer() {
               <img src="/images/RBC-logo-cropped.png" alt="R.B. Complex" />
             </span>
           </Link>
-          <p>
-            A shopping and commercial destination in the heart of New Road,
-            Kathmandu. Find stores, offers and visitor information in one place.
-          </p>
+          <p>{copy.description}</p>
           <div className="footer-social" aria-label="R.B. Complex social media">
             <a
               href="https://www.facebook.com/profile.php?id=61594139743229"
@@ -81,39 +95,37 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <nav className="footer-col" aria-label="Explore R.B. Complex">
-          <h2>Explore</h2>
-          {explore.map(([label, href]) => (
+        <nav className="footer-col" aria-label={copy.explore}>
+          <h2>{copy.explore}</h2>
+          {copy.exploreLinks.map(([label, href]) => (
             <Link key={href} href={href}>
               {label}
             </Link>
           ))}
         </nav>
-        <nav className="footer-col" aria-label="Visitor information">
-          <h2>Visitor</h2>
-          {visitor.map(([label, href]) => (
+        <nav className="footer-col" aria-label={copy.visitor}>
+          <h2>{copy.visitor}</h2>
+          {copy.visitorLinks.map(([label, href]) => (
             <Link key={label} href={href}>
               {label}
             </Link>
           ))}
         </nav>
         <div className="footer-contact-card">
-          <p className="footer-kicker">For businesses</p>
-          <h2>Bring your brand to New Road.</h2>
+          <p className="footer-kicker">{copy.business}</p>
+          <h2>{copy.slogan}</h2>
           <Link className="footer-cta" href="/leasing/">
-            Leasing enquiry <SiteIcon name="external" className="inline-icon" />
+            {copy.leasing} <SiteIcon name="external" className="inline-icon" />
           </Link>
           <div className="footer-contact-details">
             <div>
-              <span>Visit us</span>
+              <span>{copy.visitUs}</span>
               <strong>
-                Pako, New Road
-                <br />
-                Kathmandu
+                {language === "ne" ? <>पाको, न्यूरोड<br />काठमाडौं</> : <>Pako, New Road<br />Kathmandu</>}
               </strong>
             </div>
             <div>
-              <span>Call us</span>
+              <span>{copy.callUs}</span>
               <a href="tel:+97714220503">01–4220503</a>
             </div>
           </div>
@@ -124,34 +136,31 @@ export default function Footer() {
         >
           <form className="newsletter-form">
             <label className="sr-only" htmlFor="footer-email">
-              Email address
+              {copy.email}
             </label>
             <input
               id="footer-email"
               type="email"
-              placeholder="Enter your email address"
+              placeholder={copy.emailPlaceholder}
               required
               name="email"
               autoComplete="email"
             />
             <button type="submit">
-              Subscribe <SiteIcon name="arrow" className="inline-icon" />
+              {copy.subscribe} <SiteIcon name="arrow" className="inline-icon" />
             </button>
           </form>
           <div>
-            <p className="footer-kicker">Stay in the loop</p>
-            <h2 id="newsletter-title">What’s new at R.B. Complex?</h2>
-            <p>
-              Receive updates on new arrivals, offers and moments happening at
-              the complex.
-            </p>
+            <p className="footer-kicker">{copy.stay}</p>
+            <h2 id="newsletter-title">{copy.news}</h2>
+            <p>{copy.updates}</p>
           </div>
         </section>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 R.B. Complex</span>
-        <span>New Road · Kathmandu · Nepal</span>
-        <span>Website prototype</span>
+        <span>{copy.copyright}</span>
+        <span>{copy.location}</span>
+        <span>{copy.prototype}</span>
       </div>
     </footer>
   );
