@@ -160,6 +160,9 @@ img {
   align-items: center;
   gap: 8px;
 }
+.language-switcher{display:inline-flex;align-items:center;gap:5px;height:38px;padding:4px 8px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);font:800 9px/1 var(--sans);letter-spacing:.08em}
+.language-switcher button{display:grid;place-items:center;min-width:25px;height:25px;padding:0;border:0;border-radius:50%;background:transparent;color:inherit;font:inherit;cursor:pointer;transition:background .2s ease,color .2s ease,transform .2s var(--ease)}
+.language-switcher button:hover{color:var(--red);transform:translateY(-1px)}.language-switcher button.active{background:var(--ink);color:#fff}.language-switcher span{color:var(--line)}
 .search-btn,
 .visit-btn {
   border: 1px solid var(--line);
