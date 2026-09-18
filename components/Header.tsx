@@ -9,7 +9,7 @@ export default function Header() {
     setLanguage(nextLanguage);
   }, []);
   const copy = language === "ne" ? {
-    home: "होम", about: "हाम्रो बारेमा", stores: "पसलहरू", offers: "अफरहरू",
+    home: "होम", about: "हाम्रो बारेमा", stores: "पसलहरु", offers: "अफरहरु",
     whatsOn: "के हुँदैछ", gallery: "ग्यालरी", blog: "ब्लग", visit: "भ्रमण", leasing: "लिजिङ",
     plan: "भ्रमण योजना",
   } : {

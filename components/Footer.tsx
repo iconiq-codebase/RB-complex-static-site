@@ -17,15 +17,15 @@ const footerCopy = {
     visitorLinks: [["Directions", "/visit/"], ["Parking", "/visit/"], ["Amenities", "/visit/"], ["Store directory", "/stores/"]],
   },
   ne: {
-    description: "न्यूरोड, काठमाडौंको मुटुमा रहेको किनमेल तथा व्यावसायिक गन्तव्य। पसल, अफर र आगन्तुक जानकारी एकै ठाउँमा पाउनुहोस्।",
+    description: "न्यू रोड, काठमाडौंको मुटुमा रहेको किनमेल तथा व्यावसायिक गन्तव्य। पसल, अफर र आगन्तुक जानकारी एकै ठाउँमा पाउनुहोस्।",
     explore: "अन्वेषण", visitor: "आगन्तुक जानकारी", business: "व्यवसायका लागि", leasing: "लिजिङ सोधपुछ",
     visitUs: "हामीलाई भेट्नुहोस्", callUs: "हामीलाई फोन गर्नुहोस्", email: "इमेल ठेगाना", emailPlaceholder: "आफ्नो इमेल ठेगाना लेख्नुहोस्",
     subscribe: "सदस्यता लिनुहोस्", stay: "सम्पर्कमा रहनुहोस्", news: "आर.बी. कम्प्लेक्समा नयाँ के छ?",
     updates: "नयाँ आगमन, अफर र कम्प्लेक्समा भइरहेका गतिविधिबारे जानकारी पाउनुहोस्।",
-    copyright: "© २०२६ आर.बी. कम्प्लेक्स", location: "न्यूरोड · काठमाडौं · नेपाल", prototype: "वेबसाइट नमुना",
-    slogan: "आफ्नो ब्रान्डलाई न्यूरोडमा ल्याउनुहोस्।",
-    exploreLinks: [["हाम्रो बारेमा", "/about/"], ["पसलहरू", "/stores/"], ["अफरहरू", "/offers/"], ["के हुँदैछ", "/whats-on/"], ["ग्यालरी", "/gallery/"], ["ब्लग", "/blog/"], ["भ्रमण योजना", "/visit/"]],
-    visitorLinks: [["दिशानिर्देश", "/visit/"], ["पार्किङ", "/visit/"], ["सुविधाहरू", "/visit/"], ["स्टोर निर्देशिका", "/stores/"]],
+    copyright: "© २०२६ आर.बी. कम्प्लेक्स", location: "न्यू रोड · काठमाडौं · नेपाल", prototype: "वेबसाइट नमुना",
+    slogan: "आफ्नो ब्रान्डलाई न्यू रोडमा ल्याउनुहोस्।",
+    exploreLinks: [["हाम्रो बारेमा", "/about/"], ["पसलहरु", "/stores/"], ["अफरहरु", "/offers/"], ["के हुँदैछ", "/whats-on/"], ["ग्यालरी", "/gallery/"], ["ब्लग", "/blog/"], ["भ्रमण योजना", "/visit/"]],
+    visitorLinks: [["दिशानिर्देश", "/visit/"], ["पार्किङ", "/visit/"], ["सुविधाहरु", "/visit/"], ["स्टोर निर्देशिका", "/stores/"]],
   },
 } as const;
 
@@ -121,7 +121,7 @@ export default function Footer() {
             <div>
               <span>{copy.visitUs}</span>
               <strong>
-                {language === "ne" ? <>पाको, न्यूरोड<br />काठमाडौं</> : <>Pako, New Road<br />Kathmandu</>}
+                {language === "ne" ? <>पाको, न्यू रोड<br />काठमाडौं</> : <>Pako, New Road<br />Kathmandu</>}
               </strong>
             </div>
             <div>
@@ -160,7 +160,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <span>{copy.copyright}</span>
         <span>{copy.location}</span>
-        <span>{copy.prototype}</span>
+        {/* <span>{copy.prototype}</span> */}
       </div>
     </footer>
   );

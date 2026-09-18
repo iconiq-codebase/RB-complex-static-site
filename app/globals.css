@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap");
+
 :root {
   --bg: #f7f4ef;
   --ink: #171513;
@@ -11,6 +13,110 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --sans: Inter, Arial, Helvetica, system-ui, sans-serif;
   --serif: Georgia, "Times New Roman", serif;
+}
+html[lang="ne"] {
+  --sans: "Noto Sans Devanagari", "Nirmala UI", Mangal, sans-serif;
+  --serif: "Noto Serif Devanagari", "Noto Sans Devanagari", "Nirmala UI", Mangal, serif;
+}
+html[lang="ne"] .promo h3,
+html[lang="ne"] .feature-card h3,
+html[lang="ne"] .category-tile h4,
+html[lang="ne"] .lifestyle-copy h3 {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.14;
+}
+html[lang="ne"] .promo p,
+html[lang="ne"] .section-head > p,
+html[lang="ne"] .section-title-row > p {
+  line-height: 1.68;
+}
+html[lang="ne"] .hero-content .eyebrow {
+  margin-bottom: 26px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+html[lang="ne"] .kicker,
+html[lang="ne"] .eyebrow {
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+}
+html[lang="ne"] .section-head .kicker,
+html[lang="ne"] .section-title-row .kicker {
+  display: block;
+  margin-bottom: 28px;
+}
+html[lang="ne"] .section-head h2 {
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+html[lang="ne"] .section-title-row h3 {
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+}
+html[lang="ne"] .history-heading .kicker,
+html[lang="ne"] .history-footer .kicker {
+  display: block;
+  margin-bottom: 28px;
+  line-height: 1.45;
+}
+html[lang="ne"] .history-heading h2,
+html[lang="ne"] .history-footer h3 {
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+html[lang="ne"] .hero h1 {
+  max-width: 680px;
+  font-size: clamp(52px, 6.3vw, 88px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+html[lang="ne"] .hero h1 em {
+  display: inline-block;
+  margin-top: 6px;
+}
+html[lang="ne"] .hero p {
+  max-width: 520px;
+  margin-top: 22px;
+  line-height: 1.72;
+}
+html[lang="ne"] .promo {
+  min-height: 350px;
+  padding: 24px;
+}
+html[lang="ne"] .promo > div:not(.big) {
+  margin: 0 -7px -7px;
+  padding: 13px 14px 11px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(247, 244, 239, 0.88), rgba(247, 244, 239, 0.96));
+}
+html[lang="ne"] .promo.main > div:not(.big) {
+  background: linear-gradient(180deg, rgba(109, 17, 24, 0.7), rgba(109, 17, 24, 0.9));
+}
+html[lang="ne"] .promo h3 {
+  max-width: 100%;
+  font-size: clamp(25px, 2.15vw, 34px);
+  overflow-wrap: anywhere;
+}
+html[lang="ne"] .promo.main h3 {
+  font-size: clamp(30px, 2.7vw, 42px);
+}
+html[lang="ne"] .promo p {
+  margin-top: 7px;
+  font-size: 11px;
+}
+@media (max-width: 760px) {
+  html[lang="ne"] .section-head .kicker,
+  html[lang="ne"] .section-title-row .kicker { margin-bottom: 20px; }
+  html[lang="ne"] .section-head h2 { line-height: 1.12; }
+  html[lang="ne"] .history-heading .kicker,
+  html[lang="ne"] .history-footer .kicker { margin-bottom: 20px; }
+  html[lang="ne"] .hero-content .eyebrow { margin-bottom: 18px; }
+  html[lang="ne"] .hero h1 { font-size: clamp(43px, 11vw, 62px); line-height: 1.1; }
+  html[lang="ne"] .promo { min-height: 295px; padding: 20px; }
+  html[lang="ne"] .promo h3 { font-size: 25px; }
+  html[lang="ne"] .promo.main h3 { font-size: 31px; }
 }
 * {
   box-sizing: border-box;
