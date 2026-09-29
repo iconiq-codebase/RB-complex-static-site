@@ -7,7 +7,7 @@ const stories = [
   { slug: "everyday-tech-edit", image: "/images/product-electronics.png", category: "Technology", title: "The everyday tech edit", excerpt: "A short guide to finding useful devices, accessories and upgrades while you are in the city." },
   { slug: "details-that-complete-a-look", image: "/images/product-accessories.png", category: "Accessories", title: "The details that complete a look", excerpt: "Watches, wallets and finishing touches make thoughtful gifts and effortless everyday additions." },
   { slug: "a-little-time-for-yourself", image: "/images/product-beauty.png", category: "Beauty", title: "A little time for yourself", excerpt: "Discover personal care and beauty essentials that bring a small lift to your regular routine." },
-  { slug: "make-a-day-of-new-road", image: "/images/shopping-4.jpg", category: "Visit guide", title: "Make a day of New Road", excerpt: "Plan the stores you want to visit, leave time to explore, and enjoy the neighbourhood along the way." },
+  { slug: "make-a-day-of-new-road", image: "/images/DSC01220.webp", category: "Visit guide", title: "Make a day of New Road", excerpt: "Plan the stores you want to visit, leave time to explore, and enjoy the neighbourhood along the way." },
 ] as const;
 
 export const metadata = { title: "Stories from R.B." };
@@ -16,7 +16,7 @@ export default function Page() {
   return <div className="view active blog-page" id="view-blog">
     <section className="blog-hero">
       <div><p className="eyebrow">Stories from R.B.</p><h1>More than<br /><em>a shopping trip.</em></h1><p>Ideas, new finds and practical guides for enjoying your time at R.B. Complex and around New Road.</p><Link className="btn btn-light" href="#latest">Explore stories <SiteIcon name="arrow" className="inline-icon" /></Link></div>
-      <img src="/images/shopping-4.jpg" alt="People enjoying a retail and dining space" />
+      <img src="/images/DSC01220.webp" alt="R.B. Complex storefronts and courtyard" />
     </section>
     <section className="section" id="latest">
       <div className="section-head"><div><p className="kicker">Latest stories</p><h2>Find your next<br /><em>favourite thing.</em></h2></div><p>Articles share shopping inspiration and practical ideas for your next day in Kathmandu’s New Road district.</p></div>

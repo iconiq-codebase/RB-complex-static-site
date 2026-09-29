@@ -24,8 +24,8 @@ export default function AboutPage() {
         </div>
         <div className="about-hero-image">
           <img
-            src="/images/shopping-1.jpg"
-            alt="R.B. Complex shopping interior"
+            src="/images/DSC01227.webp"
+            alt="R.B. Complex courtyard and storefronts"
             loading="eager"
           />
         </div>

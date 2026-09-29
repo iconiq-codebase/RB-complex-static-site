@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const storageKey = "rb-nepali-translation-cache-v2";
@@ -244,7 +244,7 @@ const preferredTranslations: Cache = {
   "Why R.B.": "किन आर.बी. कम्प्लेक्स?",
   "A New Road address": "न्यू रोडको ठेगाना",
   "with visibility.": "उत्कृष्ट पहुँचसहित।",
-  "Available-space concept": "उपलब्ध स्थानको अवधारणा",
+  "Available-space at R.B. Complex": "उपलब्ध स्थानको अवधारणा",
   "Show the space.": "स्थान देखाउनुहोस्।",
   "Sell the possibility.": "सम्भावना प्रस्तुत गर्नुहोस्।",
   "Leasing process": "लिजिङ प्रक्रिया",
@@ -465,6 +465,20 @@ async function translate(text: string, cache: Cache) {
 
 export default function GoogleTranslate() {
   const pathname = usePathname();
+  const [languageVersion, setLanguageVersion] = useState(0);
+
+  useEffect(() => {
+    const handleLanguageChange = (event: Event) => {
+      const language = (event as CustomEvent<"en" | "ne">).detail;
+      if (language === "en") {
+        window.location.reload();
+        return;
+      }
+      setLanguageVersion((version) => version + 1);
+    };
+    window.addEventListener("rb-language-change", handleLanguageChange);
+    return () => window.removeEventListener("rb-language-change", handleLanguageChange);
+  }, []);
 
   useEffect(() => {
     if (window.localStorage.getItem("rb-language") !== "ne") return;
@@ -536,7 +550,7 @@ export default function GoogleTranslate() {
       });
     });
     return () => { cancelled = true; spellingObserver.disconnect(); };
-  }, [pathname]);
+  }, [pathname, languageVersion]);
 
   return null;
 }

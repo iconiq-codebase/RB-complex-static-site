@@ -5,8 +5,8 @@ export default function Page() {
     <div className="view active" id="view-offers">
       <section className="hero" style={{ height: "72vh", minHeight: "560px" }}>
         <img
-          src="/images/shopping-3.jpg"
-          alt="Fashion retail promotion concept"
+          src="/images/DSC01217.webp"
+          alt="Fashion retail promotion at R.B. Complex"
           loading="eager"
         />
         <div className="hero-content reveal-left show">
@@ -31,11 +31,7 @@ export default function Page() {
               <em>{"coming in for."}</em>
             </h2>
           </div>
-          <p>
-            {
-              "These are presentation examples, not actual R.B. Complex promotions."
-            }
-          </p>
+          <p>{"Live promotions will include participating stores, validity dates and terms before they are published here."}</p>
         </div>
         <div className="promo-grid">
           <article className="promo main promo-with-image reveal-left show">
@@ -44,12 +40,12 @@ export default function Page() {
               src="/images/product-fashion.png"
               alt="Fashion collection"
             />
-            <span className="tag">{"Fashion week"}</span>
+            <span className="tag">{"Fashion"}</span>
             <div>
-              <h3>{"Up to 30% off*"}</h3>
-              <p>{"Prototype campaign for participating fashion stores."}</p>
+              <h3>{"Fashion highlights"}</h3>
+              <p>{"Discover the latest styles from fashion stores at R.B. Complex."}</p>
             </div>
-            <div className="big">{"30"}</div>
+            <div className="big">{"R.B."}</div>
           </article>
           <article className="promo promo-with-image reveal show">
             <img
@@ -60,7 +56,7 @@ export default function Page() {
             <span className="tag">{"Footwear"}</span>
             <div>
               <h3>{"Weekend edit"}</h3>
-              <p>{"Feature store-led offers in this space."}</p>
+              <p>{"See footwear stores and current arrivals."}</p>
             </div>
           </article>
           <article className="promo promo-with-image reveal-right show">
@@ -72,11 +68,11 @@ export default function Page() {
             <span className="tag">{"Electronics"}</span>
             <div>
               <h3>{"Tech deals"}</h3>
-              <p>{"Highlight selected device and accessory promotions."}</p>
+              <p>{"Find electronics, accessories and everyday services."}</p>
             </div>
           </article>
         </div>
-        <p className="note">{"*Prototype promotional copy only."}</p>
+        <p className="note">{"Promotions are published only after participating stores confirm their details."}</p>
       </section>
       <section className="section cream">
         <div className="section-head reveal show">
@@ -97,50 +93,50 @@ export default function Page() {
         <div className="offer-board">
           <article className="offer-wide reveal-left show">
             <img
-              src="/images/shopping-3.jpg"
-              alt="Fashion offer concept"
+              src="/images/product-fashion.png"
+              alt="Fashion collection"
               loading="lazy"
             />
             <div className="copy">
               <small>{"Fashion"}</small>
               <h3>{"Refresh your wardrobe."}</h3>
-              <p>{"Prototype campaign card for fashion tenants."}</p>
+              <p>{"Browse fashion stores and discover seasonal arrivals."}</p>
             </div>
           </article>
           <article className="offer-wide reveal-right show">
             <img
-              src="/images/shopping-5.jpg"
-              alt="Footwear offer concept"
+              src="/images/product-footwear.png"
+              alt="Footwear collection"
               loading="lazy"
             />
             <div className="copy">
               <small>{"Footwear"}</small>
               <h3>{"Step into the weekend."}</h3>
-              <p>{"Feature store-specific footwear offers here."}</p>
+              <p>{"Find footwear stores across the directory."}</p>
             </div>
           </article>
           <article className="offer-wide reveal-left show">
             <img
-              src="/images/shopping-6.jpg"
-              alt="Beauty offer concept"
+              src="/images/product-beauty.png"
+              alt="Beauty products"
               loading="lazy"
             />
             <div className="copy">
               <small>{"Beauty & accessories"}</small>
               <h3>{"Small details. Big difference."}</h3>
-              <p>{"Use this space for accessory and beauty promotions."}</p>
+              <p>{"Explore accessories and personal style destinations."}</p>
             </div>
           </article>
           <article className="offer-wide reveal-right show">
             <img
-              src="/images/shopping-2.jpg"
-              alt="Electronics offer concept"
+              src="/images/product-electronics.png"
+              alt="Consumer electronics"
               loading="lazy"
             />
             <div className="copy">
               <small>{"Electronics"}</small>
               <h3>{"Upgrade your everyday."}</h3>
-              <p>{"Device, accessory and service offer campaigns."}</p>
+              <p>{"Find electronics and services for everyday needs."}</p>
             </div>
           </article>
         </div>
@@ -164,7 +160,7 @@ export default function Page() {
           </div>
           <p>
             {
-              "Every real promotion should show participating stores, expiry dates and conditions. These examples are purely design placeholders."
+              "Every live promotion will show participating stores, expiry dates and conditions before publication."
             }
           </p>
         </div>
@@ -189,8 +185,8 @@ export default function Page() {
       </section>
       <section className="long-cta reveal show">
         <img
-          src="/images/shopping-3.jpg"
-          alt="Fashion shopping campaign concept"
+          src="/images/DSC01217.webp"
+          alt="Fashion shopping campaign at R.B. Complex"
           loading="lazy"
         />
         <div className="long-cta-copy">

@@ -58,7 +58,12 @@ export default function Header() {
         <Link className="visit-btn route" data-view="visit" href="/visit/">
           {copy.plan} <SiteIcon name="external" className="inline-icon" />
         </Link>
-        <button className="menu" aria-label="Menu">
+        <button
+          className="menu"
+          type="button"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
           <span></span>
           <span></span>
         </button>

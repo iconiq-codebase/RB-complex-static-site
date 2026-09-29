@@ -2,13 +2,13 @@ import Link from "next/link";
 import SiteIcon from "../../components/SiteIcon";
 
 const gallery = [
-  ["/images/shopping-1.jpg", "Inside R.B.", "A bright, contemporary retail moment."],
+  ["/images/DSC01227.webp", "The R.B. courtyard", "A real view of the complex at New Road."],
   ["/images/product-fashion.png", "New season style", "Fashion finds for every day."],
   ["/images/product-footwear.png", "Step out", "Footwear and fresh arrivals."],
-  ["/images/shopping-4.jpg", "Make a day of it", "Meet, browse and enjoy New Road."],
+  ["/images/DSC01220.webp", "New Road frontage", "A familiar destination for a day in the city."],
   ["/images/product-electronics.png", "Everyday tech", "Devices and accessories to discover."],
   ["/images/product-beauty.png", "Small details", "Beauty and personal style."],
-  ["/images/shopping-5.jpg", "Retail in motion", "A changing collection of new finds."],
+  ["/images/DSC01226.webp", "Courtyard access", "Convenient arrival and parking at R.B. Complex."],
   ["/images/product-accessories.png", "The finishing touch", "Accessories for the everyday."],
 ] as const;
 
@@ -17,7 +17,7 @@ export const metadata = { title: "Gallery" };
 export default function Page() {
   return <div className="view active gallery-page" id="view-gallery">
     <section className="gallery-hero">
-      <img src="/images/shopping-1.jpg" alt="Shopping interior at R.B. Complex" />
+      <img src="/images/DSC01227.webp" alt="R.B. Complex storefronts" />
       <div className="gallery-hero-copy"><p className="eyebrow">Gallery</p><h1>See what’s<br /><em>waiting inside.</em></h1><p>A visual collection of fresh finds, everyday style and moments from the R.B. Complex experience.</p></div>
     </section>
     <section className="section">

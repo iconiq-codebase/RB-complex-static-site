@@ -15,10 +15,24 @@ export default function Interactions() {
    link.classList.toggle('active', active);
    if (active) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
   });
-  function close() { nav.classList.remove('open'); document.body.classList.remove('menu-open'); menu.setAttribute('aria-expanded', 'false'); }
-  function resize() { nav.classList.toggle('mobile', innerWidth <= 1020); if (innerWidth > 1020) close(); }
+  function close() {
+   nav.classList.remove('open');
+   menu.classList.remove('open');
+   nav.style.transform = '';
+   nav.style.visibility = '';
+   document.body.classList.remove('menu-open');
+   menu.setAttribute('aria-expanded', 'false');
+  }
+    function resize() { nav.classList.toggle('mobile', innerWidth <= 900); if (innerWidth > 900) close(); }
   close(); resize(); window.addEventListener('resize', resize, options);
-  menu.addEventListener('click', () => { const open = nav.classList.toggle('open'); document.body.classList.toggle('menu-open', open); menu.setAttribute('aria-expanded', String(open)); }, options);
+  menu.addEventListener('click', () => {
+   const open = nav.classList.toggle('open');
+   menu.classList.toggle('open', open);
+   nav.style.transform = open ? 'translateX(0)' : '';
+   nav.style.visibility = open ? 'visible' : '';
+   document.body.classList.toggle('menu-open', open);
+   menu.setAttribute('aria-expanded', String(open));
+  }, options);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { close(); } }, options);
   function progress() { const max = document.documentElement.scrollHeight - innerHeight; document.documentElement.style.setProperty('--p', `${max > 0 ? scrollY / max * 100 : 0}%`); }
   progress(); window.addEventListener('scroll', progress, { ...options, passive: true });
@@ -31,7 +45,7 @@ export default function Interactions() {
    const query = search?.value.toLowerCase().trim() || '';
    let count = 0;
    stores.forEach(store => { const visible = (category === 'all' || store.dataset.category === category) && (!letter || store.querySelector('h3')?.textContent?.startsWith(letter)) && `${store.dataset.search} ${store.textContent}`.toLowerCase().includes(query); store.classList.toggle('hidden', !visible); if (visible) count++; });
-   status.textContent = count ? `${count} sample stores found` : 'No stores found. Try another search or category.';
+  status.textContent = count ? `${count} stores found` : 'No stores found. Try another search or category.';
   }
   search?.addEventListener('input', filter, options);
   document.querySelectorAll<HTMLButtonElement>('.filter').forEach(button => {
@@ -43,13 +57,23 @@ export default function Interactions() {
    button.addEventListener('click', () => { letter = letter === button.textContent ? '' : button.textContent || ''; document.querySelectorAll('.az-strip button').forEach(b => { b.classList.toggle('active', b.textContent === letter); b.setAttribute('aria-pressed', String(b.textContent === letter)); }); filter(); search?.scrollIntoView({ block: 'center', behavior: 'smooth' }); }, options);
   });
   if (search) filter();
-  document.querySelectorAll<HTMLFormElement>('form').forEach(form => form.addEventListener('submit', e => {
-   e.preventDefault();
-   let message = form.parentElement?.querySelector<HTMLElement>('.form-status');
-   if (!message) { message = document.createElement('p'); message.className = 'form-status'; form.after(message); }
-   message.textContent = form.classList.contains('newsletter-form') ? 'Preview only. Your email has not been subscribed or stored.' : 'Demo complete. Your enquiry has not been sent. Please contact mall management directly.';
-   message.setAttribute('role', 'status'); message.style.display = 'block';
-  }, options));
+    document.querySelectorAll<HTMLFormElement>('.demo-form').forEach(form => form.addEventListener('submit', e => {
+     e.preventDefault();
+     const values = new FormData(form);
+     const message = [
+        'Hello R.B. Complex, I would like to enquire about leasing.',
+        `Name: ${values.get('field-0') || ''}`,
+        `Phone: ${values.get('field-1') || ''}`,
+        `Business: ${values.get('field-2') || ''}`,
+        `Category: ${values.get('field-3') || ''}`,
+        `Requirements: ${values.get('field-4') || ''}`,
+     ].join('\n');
+     window.open(`https://wa.me/9779841112360?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+     let status = form.parentElement?.querySelector<HTMLElement>('.form-status');
+     if (!status) { status = document.createElement('p'); status.className = 'form-status'; form.after(status); }
+     status.textContent = 'Your enquiry is ready in WhatsApp. Review it there before sending to the leasing team.';
+     status.setAttribute('role', 'status'); status.style.display = 'block';
+    }, options));
   return () => { controller.abort(); status.remove(); document.body.classList.remove('menu-open'); };
  }, [pathname]);
  return null;

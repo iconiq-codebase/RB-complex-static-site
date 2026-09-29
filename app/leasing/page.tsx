@@ -24,8 +24,8 @@ export default function Page() {
         </div>
         <div className="lease-image reveal-right show">
           <img
-            src="/images/shopping-5.jpg"
-            alt="Premium mall leasing concept"
+            src="/images/DSC01217.webp"
+            alt="R.B. Complex retail facade and storefronts"
             loading="lazy"
           />
         </div>
@@ -40,7 +40,7 @@ export default function Page() {
               <em>{"your business."}</em>
             </h2>
           </div>
-          <p>{"This demo form works visually but does not transmit data."}</p>
+          <p>{"Complete the details below and review your enquiry in WhatsApp before sending it to the leasing team."}</p>
         </div>
         <form className="form demo-form reveal show">
           <div className="field">
@@ -78,15 +78,10 @@ export default function Page() {
           </div>
           <div className="field full">
             <button className="btn btn-red" type="submit">
-              {"Submit prototype enquiry →"}
+              {"Continue in WhatsApp →"}
             </button>
           </div>
         </form>
-        <div className="form-status">
-          {
-            "Demo complete. Your enquiry has not been sent. Please contact mall management directly."
-          }
-        </div>
       </section>
       <section className="section cream">
         <div className="section-head reveal show">
@@ -126,28 +121,24 @@ export default function Page() {
       <section className="section">
         <div className="section-head reveal show">
           <div>
-            <p className="kicker">{"Available-space concept"}</p>
+            <p className="kicker">{"Available-space at R.B. Complex"}</p>
             <h2>
               {"Show the space."}
               <br />
               <em>{"Sell the possibility."}</em>
             </h2>
           </div>
-          <p>
-            {
-              "A strong leasing page should visually show available units instead of asking businesses to call blindly. The units below are prototype placeholders."
-            }
-          </p>
+          <p>{"Ask the leasing team about current availability, unit sizes and commercial terms."}</p>
         </div>
         <div className="space-preview">
           <div className="space-photo reveal-left show">
             <img
-              src="/images/shopping-5.jpg"
-              alt="Retail space concept"
+              src="/images/DSC01220.webp"
+              alt="R.B. Complex storefronts along New Road"
               loading="lazy"
             />
             <div className="label">
-              <small>{"Concept vacancy"}</small>
+              <small>{"Leasing opportunities"}</small>
               <h3>{"Put your brand in view."}</h3>
             </div>
           </div>
@@ -156,7 +147,7 @@ export default function Page() {
               <div className="unit">{"G"}</div>
               <div>
                 <h4>{"Ground-floor unit"}</h4>
-                <p>{"High-visibility prototype space."}</p>
+                <p>{"Ask about current ground-floor availability."}</p>
               </div>
               <a href="#leasingForm">{"Enquire"}</a>
             </article>
@@ -164,7 +155,7 @@ export default function Page() {
               <div className="unit">{"01"}</div>
               <div>
                 <h4>{"First-floor unit"}</h4>
-                <p>{"Fashion / footwear prototype positioning."}</p>
+                <p>{"Ask about current first-floor availability."}</p>
               </div>
               <a href="#leasingForm">{"Enquire"}</a>
             </article>
@@ -172,7 +163,7 @@ export default function Page() {
               <div className="unit">{"02"}</div>
               <div>
                 <h4>{"Second-floor unit"}</h4>
-                <p>{"Electronics / accessory prototype positioning."}</p>
+                <p>{"Ask about current second-floor availability."}</p>
               </div>
               <a href="#leasingForm">{"Enquire"}</a>
             </article>
@@ -180,7 +171,7 @@ export default function Page() {
               <div className="unit">{"03"}</div>
               <div>
                 <h4>{"Third-floor unit"}</h4>
-                <p>{"Service / specialty prototype positioning."}</p>
+                <p>{"Ask about current third-floor availability."}</p>
               </div>
               <a href="#leasingForm">{"Enquire"}</a>
             </article>
@@ -277,8 +268,8 @@ export default function Page() {
       </section>
       <section className="long-cta reveal show">
         <img
-          src="/images/shopping-5.jpg"
-          alt="Retail leasing concept"
+          src="/images/DSC01227.webp"
+          alt="R.B. Complex courtyard and storefronts"
           loading="lazy"
         />
         <div className="long-cta-copy">

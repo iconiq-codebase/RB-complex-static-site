@@ -11,7 +11,7 @@ const footerCopy = {
     visitUs: "Visit us", callUs: "Call us", email: "Email address", emailPlaceholder: "Enter your email address",
     subscribe: "Subscribe", stay: "Stay in the loop", news: "What’s new at R.B. Complex?",
     updates: "Receive updates on new arrivals, offers and moments happening at the complex.",
-    copyright: "© 2026 R.B. Complex", location: "New Road · Kathmandu · Nepal", prototype: "Website prototype",
+    copyright: "© 2026 R.B. Complex", location: "New Road · Kathmandu · Nepal",
     slogan: "Bring your brand to New Road.",
     exploreLinks: [["About", "/about/"], ["Stores", "/stores/"], ["Offers", "/offers/"], ["What’s On", "/whats-on/"], ["Gallery", "/gallery/"], ["Blog", "/blog/"], ["Plan a visit", "/visit/"]],
     visitorLinks: [["Directions", "/visit/"], ["Parking", "/visit/"], ["Amenities", "/visit/"], ["Store directory", "/stores/"]],
@@ -22,7 +22,7 @@ const footerCopy = {
     visitUs: "हामीलाई भेट्नुहोस्", callUs: "हामीलाई फोन गर्नुहोस्", email: "इमेल ठेगाना", emailPlaceholder: "आफ्नो इमेल ठेगाना लेख्नुहोस्",
     subscribe: "सदस्यता लिनुहोस्", stay: "सम्पर्कमा रहनुहोस्", news: "आर.बी. कम्प्लेक्समा नयाँ के छ?",
     updates: "नयाँ आगमन, अफर र कम्प्लेक्समा भइरहेका गतिविधिबारे जानकारी पाउनुहोस्।",
-    copyright: "© २०२६ आर.बी. कम्प्लेक्स", location: "न्यू रोड · काठमाडौं · नेपाल", prototype: "वेबसाइट नमुना",
+    copyright: "© २०२६ आर.बी. कम्प्लेक्स", location: "न्यू रोड · काठमाडौं · नेपाल",
     slogan: "आफ्नो ब्रान्डलाई न्यू रोडमा ल्याउनुहोस्।",
     exploreLinks: [["हाम्रो बारेमा", "/about/"], ["पसलहरु", "/stores/"], ["अफरहरु", "/offers/"], ["के हुँदैछ", "/whats-on/"], ["ग्यालरी", "/gallery/"], ["ब्लग", "/blog/"], ["भ्रमण योजना", "/visit/"]],
     visitorLinks: [["दिशानिर्देश", "/visit/"], ["पार्किङ", "/visit/"], ["सुविधाहरु", "/visit/"], ["स्टोर निर्देशिका", "/stores/"]],
@@ -33,6 +33,12 @@ export default function Footer() {
   const [language, setLanguage] = useState<"en" | "ne">("en");
   useEffect(() => {
     if (window.localStorage.getItem("rb-language") === "ne") setLanguage("ne");
+    const handleLanguageChange = (event: Event) => {
+      const nextLanguage = (event as CustomEvent<"en" | "ne">).detail;
+      setLanguage(nextLanguage);
+    };
+    window.addEventListener("rb-language-change", handleLanguageChange);
+    return () => window.removeEventListener("rb-language-change", handleLanguageChange);
   }, []);
   const copy = footerCopy[language];
   return (
@@ -126,41 +132,30 @@ export default function Footer() {
             </div>
             <div>
               <span>{copy.callUs}</span>
-              <a href="tel:+97714220503">01–4220503</a>
+              <a href="tel:+977 9841112360">9841112360</a>
             </div>
           </div>
         </div>
-        <section
-          className="footer-newsletter"
-          aria-labelledby="newsletter-title"
-        >
-          <form className="newsletter-form">
-            <label className="sr-only" htmlFor="footer-email">
-              {copy.email}
-            </label>
-            <input
-              id="footer-email"
-              type="email"
-              placeholder={copy.emailPlaceholder}
-              required
-              name="email"
-              autoComplete="email"
-            />
-            <button type="submit">
-              {copy.subscribe} <SiteIcon name="arrow" className="inline-icon" />
-            </button>
-          </form>
+        <section className="footer-newsletter" aria-labelledby="newsletter-title">
           <div>
             <p className="footer-kicker">{copy.stay}</p>
             <h2 id="newsletter-title">{copy.news}</h2>
             <p>{copy.updates}</p>
+            <a
+              className="footer-cta"
+              href="https://www.instagram.com/rbcomplexofficial/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {language === "ne" ? "इन्स्टाग्राममा फलो गर्नुहोस्" : "Follow on Instagram"}
+              <SiteIcon name="external" className="inline-icon" />
+            </a>
           </div>
         </section>
       </div>
       <div className="footer-bottom">
         <span>{copy.copyright}</span>
         <span>{copy.location}</span>
-        {/* <span>{copy.prototype}</span> */}
       </div>
     </footer>
   );

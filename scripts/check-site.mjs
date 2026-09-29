@@ -18,7 +18,7 @@ await page.getByRole('button',{name:'Footwear',exact:true}).click();
 if(await page.locator('.store:not(.hidden)').count()!==2)throw Error('Filter');
 await page.goto('http://localhost:3000/leasing/');
 await page.getByLabel('Your name').fill('Test visitor');await page.getByLabel('Phone',{exact:true}).fill('9800000000');
-await page.getByRole('button',{name:'Submit prototype enquiry'}).click();await page.getByRole('status').filter({hasText:'has not been sent'}).waitFor();
+await page.getByRole('button',{name:'Continue in WhatsApp'}).click();await page.getByRole('status').filter({hasText:'ready in WhatsApp'}).waitFor();
 await page.setViewportSize({width:390,height:844});
 for(const route of ['', 'stores/','offers/','whats-on/','visit/','leasing/']){
  await page.goto(`http://localhost:3000/${route}`);

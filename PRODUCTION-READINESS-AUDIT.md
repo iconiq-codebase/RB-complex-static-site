@@ -19,13 +19,13 @@
 
 1. **Replace all sample and unverified content.** The README and visible pages explicitly label tenants, unit numbers, offers, campaigns, events, leasing spaces, floor data, articles, photography, and visitor guidance as prototypes or samples. Replace with management-approved data, dates, terms, and photography; then remove prototype language and the footer’s “Website prototype” label.
 
-2. **Connect forms to a real, privacy-reviewed service.** Newsletter and leasing forms currently prevent submission and display a demo response. A production form needs a destination, spam protection, validation, success/error states, consent text, privacy policy, retention rules, and a tested owner workflow.
+2. **Confirm the leasing handoff and privacy workflow.** The leasing form now opens a prefilled WhatsApp enquiry for the visitor to review and send. Confirm the destination number, responsible leasing team, consent/privacy wording, spam handling and successful owner workflow before launch. The footer intentionally does not collect newsletter data.
 
 3. **Verify local-business information.** Confirm official business name, exact address, map pin, phone numbers, opening hours, holiday hours, parking, accessibility facilities, social handles, and leasing contact. The current site correctly says several items must be verified; those placeholders cannot remain on the public version.
 
-4. **Fix the Blog content model.** Three article URLs are generated, but six cards are shown. Cards four through six currently route to the third article because the link selection falls back to one slug. Create six matching article records or reduce the card count to three.
+4. **Keep the Blog content model maintained.** Six blog cards and six statically generated article routes now match. Keep the list and `posts` record in sync when adding or removing stories.
 
-5. **Use authentic social URLs.** Facebook and Instagram now point to specific URLs, but YouTube and TikTok point to platform homepages. Replace them with approved R.B. Complex profiles or remove the icons.
+5. **Approve authentic social URLs.** Facebook, Instagram and TikTok are configured with profile URLs in the footer. Confirm ownership and remove any channel that is not an official R.B. Complex profile.
 
 ## High-priority launch work
 

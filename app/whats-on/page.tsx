@@ -5,8 +5,8 @@ export default function Page() {
     <div className="view active" id="view-whats-on">
       <section className="hero" style={{ height: "72vh", minHeight: "560px" }}>
         <img
-          src="/images/shopping-4.jpg"
-          alt="Dining and social experience concept"
+          src="/images/DSC01220.webp"
+          alt="Dining and social experience at R.B. Complex"
           loading="eager"
         />
         <div className="hero-content reveal-left show">
@@ -31,27 +31,23 @@ export default function Page() {
               <em>{"coming up."}</em>
             </h2>
           </div>
-          <p>
-            {
-              "A real mall website needs fresh content. This page can later be managed as an events/news section."
-            }
-          </p>
+          <p>{"Check this page for events, new openings and seasonal moments as they are confirmed by management."}</p>
         </div>
         <div className="event-grid">
           <article className="event reveal-left show">
             <div className="event-image">
               <img
-                src="/images/shopping-6.jpg"
-                alt="Fashion event concept"
+                src="/images/DSC01215.webp"
+                alt="Fashion event at R.B. Complex"
                 loading="lazy"
               />
             </div>
             <div className="event-body">
-              <small>{"Prototype event"}</small>
-              <h3>{"New Season Edit"}</h3>
+              <small>{"Seasonal moment"}</small>
+              <h3>{"Seasonal edits"}</h3>
               <p>
                 {
-                  "A curated fashion-focused campaign across participating stores."
+                  "Look out for confirmed fashion campaigns across participating stores."
                 }
               </p>
             </div>
@@ -59,24 +55,22 @@ export default function Page() {
           <article className="event reveal show">
             <div className="event-image">
               <img
-                src="/images/shopping-2.jpg"
-                alt="Mall event concept"
+                src="/images/DSC01215.webp"
+                alt="Mall event at R.B. Complex"
                 loading="lazy"
               />
             </div>
             <div className="event-body">
               <small>{"New opening"}</small>
               <h3>{"Something new is coming"}</h3>
-              <p>
-                {"Use this card to announce a new tenant or refreshed space."}
-              </p>
+              <p>{"New store announcements will appear here once confirmed."}</p>
             </div>
           </article>
           <article className="event reveal-right show">
             <div className="event-image">
               <img
-                src="/images/shopping-4.jpg"
-                alt="Dining event concept"
+                src="/images/DSC01220.webp"
+                alt="Dining event at R.B. Complex"
                 loading="lazy"
               />
             </div>
@@ -84,7 +78,7 @@ export default function Page() {
               <small>{"Weekend"}</small>
               <h3>{"Meet. Shop. Stay."}</h3>
               <p>
-                {"Promote weekend activations or seasonal visitor experiences."}
+                {"Weekend activations and visitor experiences will be listed here."}
               </p>
             </div>
           </article>
@@ -151,15 +145,15 @@ export default function Page() {
           </div>
           <p>
             {
-              "Use editorial content for store openings, campaigns, tenant stories and announcements."
+              "Follow confirmed store openings, campaigns, tenant stories and announcements here."
             }
           </p>
         </div>
         <div className="news-grid">
           <article className="news-main reveal-left show">
             <img
-              src="/images/shopping-2.jpg"
-              alt="Mall opening story concept"
+              src="/images/DSC01215.webp"
+              alt="Mall opening story at R.B. Complex"
               loading="lazy"
             />
             <div className="news-copy">
@@ -170,8 +164,8 @@ export default function Page() {
           <div className="news-side-wrap">
             <article className="news-side reveal-right show">
               <img
-                src="/images/shopping-3.jpg"
-                alt="Fashion story concept"
+                src="/images/DSC01217.webp"
+                alt="Fashion story at R.B. Complex"
                 loading="lazy"
               />
               <div className="news-copy">
@@ -181,8 +175,8 @@ export default function Page() {
             </article>
             <article className="news-side reveal-right show">
               <img
-                src="/images/shopping-4.jpg"
-                alt="Community story concept"
+                src="/images/DSC01220.webp"
+                alt="Community story at R.B. Complex"
                 loading="lazy"
               />
               <div className="news-copy">
@@ -208,35 +202,35 @@ export default function Page() {
         <div className="social-grid">
           <div className="social-tile reveal-left show">
             <img
-              src="/images/shopping-6.jpg"
+              src="/images/DSC01215.webp"
               alt="Style content"
               loading="lazy"
             />
           </div>
           <div className="social-tile reveal show">
             <img
-              src="/images/shopping-2.jpg"
+              src="/images/DSC01215.webp"
               alt="Mall content"
               loading="lazy"
             />
           </div>
           <div className="social-tile reveal show">
             <img
-              src="/images/shopping-3.jpg"
+              src="/images/DSC01217.webp"
               alt="Fashion content"
               loading="lazy"
             />
           </div>
           <div className="social-tile reveal show">
             <img
-              src="/images/shopping-4.jpg"
+              src="/images/DSC01220.webp"
               alt="Dining content"
               loading="lazy"
             />
           </div>
           <div className="social-tile reveal-right show">
             <img
-              src="/images/shopping-5.jpg"
+              src="/images/DSC01226.webp"
               alt="Retail content"
               loading="lazy"
             />
@@ -245,8 +239,8 @@ export default function Page() {
       </section>
       <section className="long-cta reveal show">
         <img
-          src="/images/shopping-4.jpg"
-          alt="Lifestyle event concept"
+          src="/images/DSC01220.webp"
+          alt="Lifestyle event at R.B. Complex"
           loading="lazy"
         />
         <div className="long-cta-copy">

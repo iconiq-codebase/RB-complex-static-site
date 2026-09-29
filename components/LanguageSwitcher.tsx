@@ -25,8 +25,12 @@ export default function LanguageSwitcher({ onChange }: Props) {
     setLanguage(nextLanguage);
     window.localStorage.setItem("rb-language", nextLanguage);
     document.documentElement.lang = nextLanguage;
+    window.dispatchEvent(
+      new CustomEvent<Language>("rb-language-change", {
+        detail: nextLanguage,
+      }),
+    );
     onChange?.(nextLanguage);
-    window.setTimeout(() => window.location.reload(), 80);
   }
 
   return (

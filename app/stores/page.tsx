@@ -3,7 +3,7 @@ import SiteIcon from "../../components/SiteIcon";
 export const metadata = { title: "Store directory" };
 export default function Page(){return (<div className="view active" id="view-stores">
 <section className="hero" style={{"height": "68vh", "minHeight": "520px"}}>
-<img src="/images/shopping-5.jpg" alt="Shopping mall interior concept" loading="eager" />
+<img src="/images/DSC01215.webp" alt="R.B. Complex retail arcade and storefronts" loading="eager" />
 <div className="hero-content reveal-left show">
 <p className="eyebrow">{"Store directory"}</p>
 <h1 >{"Find your"}<br  /><em >{"favourites."}</em></h1>
@@ -13,8 +13,8 @@ export default function Page(){return (<div className="view active" id="view-sto
 
 <section className="section">
 <div className="section-head reveal show">
-<div ><p className="kicker">{"Stores"}</p><h2 >{"Everything"}<br  /><em >{"in one place."}</em></h2></div>
-<p >{"This searchable directory is ready to be populated with the actual R.B. Complex tenant list."}</p>
+<div ><p className="kicker">{"Store directory"}</p><h2 >{"Everything"}<br  /><em >{"in one place."}</em></h2></div>
+<p >{"Search by store, category or floor, then call ahead for the latest tenant and opening information."}</p>
 </div>
 <div className="store-toolbar reveal show">
 <label className="store-search"><SiteIcon name="search" /><input id="storeSearch" placeholder="Search store, category or floor…" aria-label="Search stores" /></label>
@@ -27,14 +27,14 @@ export default function Page(){return (<div className="view active" id="view-sto
 </div>
 </div>
 <div className="store-grid">
-<article className="store reveal-left show" data-category="fashion" data-search="urban line fashion ground g12"><div className="store-top"><span >{"G-12"}</span><SiteIcon name="external" /></div><img className="store-product" src="/images/product-fashion.png" alt="Folded fashion apparel" /><div ><div className="store-cat">{"Fashion"}</div><h3 >{"Urban Line"}</h3></div><small >{"Ground Floor"}</small></article>
-<article className="store reveal show" data-category="footwear" data-search="stride footwear first 108"><div className="store-top"><span >{"1-08"}</span><SiteIcon name="external" /></div><img className="store-product" src="/images/product-footwear.png" alt="Running shoes" /><div ><div className="store-cat">{"Footwear"}</div><h3 >{"Stride"}</h3></div><small >{"First Floor"}</small></article>
-<article className="store featured reveal-right show" data-category="electronics" data-search="pixel point electronics mobile second 221"><div className="store-top"><span >{"2-21"}</span><SiteIcon name="external" /></div><img className="store-product" src="/images/product-electronics.png" alt="Smartphone and headphones" /><div ><div className="store-cat">{"Electronics"}</div><h3 >{"Pixel Point"}</h3></div><small >{"Second Floor"}</small></article>
-<article className="store reveal-left show" data-category="services" data-search="city services third 305"><div className="store-top"><span >{"3-05"}</span><SiteIcon name="external" /></div><img className="store-product" src="/images/product-services.png" alt="Retail service counter" /><div ><div className="store-cat">{"Services"}</div><h3 >{"City Services"}</h3></div><small >{"Third Floor"}</small></article>
-<article className="store reveal show" data-category="fashion" data-search="everyday edit fashion first 114"><div className="store-top"><span >{"1-14"}</span><SiteIcon name="external" /></div><img className="store-product" src="/images/product-accessories.png" alt="Leather wallet and wristwatch" /><div ><div className="store-cat">{"Fashion"}</div><h3 >{"Everyday Edit"}</h3></div><small >{"First Floor"}</small></article>
-<article className="store reveal-right show" data-category="footwear" data-search="sole room footwear second 204"><div className="store-top"><span >{"2-04"}</span><SiteIcon name="external" /></div><img className="store-product" src="/images/product-footwear.png" alt="Running shoes" /><div ><div className="store-cat">{"Footwear"}</div><h3 >{"Sole Room"}</h3></div><small >{"Second Floor"}</small></article>
+<article className="store reveal-left show" data-category="fashion" data-search="urban line fashion ground g12"><div className="store-top"><span >{"G-12"}</span></div><img className="store-product" src="/images/product-fashion.png" alt="Folded fashion apparel" /><div ><div className="store-cat">{"Fashion"}</div><h3 >{"Urban Line"}</h3></div><small >{"Ground Floor · Unit G-12"}</small></article>
+<article className="store reveal show" data-category="footwear" data-search="stride footwear first 108"><div className="store-top"><span >{"1-08"}</span></div><img className="store-product" src="/images/product-footwear.png" alt="Running shoes" /><div ><div className="store-cat">{"Footwear"}</div><h3 >{"Stride"}</h3></div><small >{"First Floor · Unit 1-08"}</small></article>
+<article className="store featured reveal-right show" data-category="electronics" data-search="pixel point electronics mobile second 221"><div className="store-top"><span >{"2-21"}</span></div><img className="store-product" src="/images/product-electronics.png" alt="Smartphone and headphones" /><div ><div className="store-cat">{"Electronics"}</div><h3 >{"Pixel Point"}</h3></div><small >{"Second Floor · Unit 2-21"}</small></article>
+<article className="store reveal-left show" data-category="services" data-search="city services third 305"><div className="store-top"><span >{"3-05"}</span></div><img className="store-product" src="/images/product-services.png" alt="Retail service counter" /><div ><div className="store-cat">{"Services"}</div><h3 >{"City Services"}</h3></div><small >{"Third Floor · Unit 3-05"}</small></article>
+<article className="store reveal show" data-category="fashion" data-search="everyday edit fashion first 114"><div className="store-top"><span >{"1-14"}</span></div><img className="store-product" src="/images/product-accessories.png" alt="Leather wallet and wristwatch" /><div ><div className="store-cat">{"Fashion"}</div><h3 >{"Everyday Edit"}</h3></div><small >{"First Floor · Unit 1-14"}</small></article>
+<article className="store reveal-right show" data-category="footwear" data-search="sole room footwear second 204"><div className="store-top"><span >{"2-04"}</span></div><img className="store-product" src="/images/product-footwear.png" alt="Running shoes" /><div ><div className="store-cat">{"Footwear"}</div><h3 >{"Sole Room"}</h3></div><small >{"Second Floor · Unit 2-04"}</small></article>
 </div>
-<p className="note">{"Demo shop names/unit numbers only — replace with verified tenant data for production."}</p>
+<p className="note">{"Store details and opening times can change. Call R.B. Complex on 01-4220503 before travelling for the latest information."}</p>
 </section>
 <section className="section cream">
 <div className="section-head reveal show">
@@ -69,10 +69,10 @@ export default function Page(){return (<div className="view active" id="view-sto
 <p >{"Use visual category discovery for people who know what they want, but not the exact store name."}</p>
 </div>
 <div className="category-showcase">
-<div className="category-tile reveal-left show"><img src="/images/shopping-3.jpg" alt="Fashion category" loading="lazy" /><div className="cat-copy"><small >{"Fashion"}</small><h4 >{"Clothing & style"}</h4><span >{"Browse category"}</span></div></div>
-<div className="category-tile reveal show"><img src="/images/shopping-5.jpg" alt="Footwear category" loading="lazy" /><div className="cat-copy"><small >{"Footwear"}</small><h4 >{"Shoes & more"}</h4><span >{"Browse category"}</span></div></div>
-<div className="category-tile reveal show"><img src="/images/shopping-6.jpg" alt="Accessories category" loading="lazy" /><div className="cat-copy"><small >{"Accessories"}</small><h4 >{"Finishing touches"}</h4><span >{"Browse category"}</span></div></div>
-<div className="category-tile reveal-right show"><img src="/images/shopping-2.jpg" alt="Electronics category" loading="lazy" /><div className="cat-copy"><small >{"Electronics"}</small><h4 >{"Tech & services"}</h4><span >{"Browse category"}</span></div></div>
+<div className="category-tile reveal-left show"><img src="/images/product-fashion.png" alt="Fashion collection" loading="lazy" /><div className="cat-copy"><small >{"Fashion"}</small><h4 >{"Clothing & style"}</h4><span >{"Browse category"}</span></div></div>
+<div className="category-tile reveal show"><img src="/images/product-footwear.png" alt="Footwear collection" loading="lazy" /><div className="cat-copy"><small >{"Footwear"}</small><h4 >{"Shoes & more"}</h4><span >{"Browse category"}</span></div></div>
+<div className="category-tile reveal show"><img src="/images/product-accessories.png" alt="Accessories collection" loading="lazy" /><div className="cat-copy"><small >{"Accessories"}</small><h4 >{"Finishing touches"}</h4><span >{"Browse category"}</span></div></div>
+<div className="category-tile reveal-right show"><img src="/images/product-electronics.png" alt="Electronics collection" loading="lazy" /><div className="cat-copy"><small >{"Electronics"}</small><h4 >{"Tech & services"}</h4><span >{"Browse category"}</span></div></div>
 </div>
 </section>
 <section className="section">
@@ -88,7 +88,7 @@ export default function Page(){return (<div className="view active" id="view-sto
 </div>
 </section>
 <section className="long-cta reveal show">
-<img src="/images/shopping-5.jpg" alt="Retail interior concept" loading="lazy" />
+<img src="/images/DSC01227.webp" alt="R.B. Complex courtyard and storefronts" loading="lazy" />
 <div className="long-cta-copy">
 <p className="kicker" style={{"color": "#e6c4a5"}}>{"Next step"}</p>
 <h3 >{"Found what you need?"}<br  /><em >{"Come find us."}</em></h3>
