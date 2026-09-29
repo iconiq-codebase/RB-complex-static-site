@@ -132,7 +132,7 @@ export default function Footer() {
             </div>
             <div>
               <span>{copy.callUs}</span>
-              <a href="tel:+977 9841112360">9841112360</a>
+              <a href="tel:+01-5320503">01-5320503</a>
             </div>
           </div>
         </div>
